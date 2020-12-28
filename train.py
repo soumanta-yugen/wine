@@ -29,7 +29,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 max_depth = [5, 10, 15]
 for depth in max_depth:
 
-    regr = RandomForestRegressor(max_depth=5, random_state=seed)
+    regr = RandomForestRegressor(max_depth=depth, random_state=seed)
     regr.fit(X_train, y_train)
 
     # Report training set score
