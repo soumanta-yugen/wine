@@ -17,10 +17,13 @@ jobs:
 
           # Write your CML report
           echo "## Model Metrics" > report.md
-          cat metrics.txt >> report.md
+          cat metrics_5.txt >> report.md
+          cat metrics_10.txt >> report.md
+          cat metrics_15.txt >> report.md
 
           echo '## Viz' >> report.md
-          cml-publish feature_importance.png --md >> report.md
-          cml-publish residuals.png --md >> report.md
+          cml-publish residuals_5.png --md >> report.md
+          cml-publish residuals_10.png --md >> report.md
+          cml-publish residuals_15.png --md >> report.md
           
           cml-send-comment report.md
